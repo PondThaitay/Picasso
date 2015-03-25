@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
     Context context = this;
     private ProgressDialog progressDialog;
 
-    private String x;
+    private String x; //variable Global
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +37,6 @@ public class MainActivity extends ActionBarActivity {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-
-
 
         g1.getData();
         x = g1.x;
@@ -60,7 +58,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             protected String doInBackground(String... paramsXD)//ทำงานหลัก แล้วส่งค่าไปที่ onPostExecute
             {
-            String x = null;
+            String x = null;//variable Local
             try
             {
                 g1.getData();
